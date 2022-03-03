@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="text">
+
+    <select id="select" parameterType="java.lang.String" resultType="com.mybatis.service.Student">
+        select * from t_student where id = #{id};
+    </select>
+
+    <insert id="add" >
+        insert into t_student() values (#{id},#{name},#{age})
+    </insert>
+</mapper>

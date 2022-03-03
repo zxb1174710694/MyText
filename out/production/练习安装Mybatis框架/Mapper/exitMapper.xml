@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Exit">
+
+    <select id="exit" parameterType="java.lang.String" resultType="com.mybatis.exit.Student">
+        select * from t_student;
+    </select>
+
+    <insert id="add">
+        insert into t_student(id,name,age) values (#{id},#{name},#{age})
+    </insert>
+</mapper>

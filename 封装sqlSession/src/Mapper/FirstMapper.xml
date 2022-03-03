@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="text01">
+
+    <select id="first" parameterType="java.lang.String" resultType="com.mybatis.text02.Student">
+        select * from t_student where id=#{id}
+    </select>
+
+    <select id="second" parameterType="java.lang.String" resultType="com.mybatis.text02.Student">
+        select * from t_student
+    </select>
+</mapper>

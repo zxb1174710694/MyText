@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CRM_用户关系.iml" filepath="$PROJECT_DIR$/CRM_用户关系.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dao层/dao层.iml" filepath="$PROJECT_DIR$/dao层/dao层.iml" />
+      <module fileurl="file://$PROJECT_DIR$/first/first.iml" filepath="$PROJECT_DIR$/first/first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/代理模式/代理模式.iml" filepath="$PROJECT_DIR$/代理模式/代理模式.iml" />
+      <module fileurl="file://$PROJECT_DIR$/封装sqlSession/封装sqlSession.iml" filepath="$PROJECT_DIR$/封装sqlSession/封装sqlSession.iml" />
+      <module fileurl="file://$PROJECT_DIR$/练习/练习.iml" filepath="$PROJECT_DIR$/练习/练习.iml" />
+      <module fileurl="file://$PROJECT_DIR$/练习安装Mybatis框架/练习安装Mybatis框架.iml" filepath="$PROJECT_DIR$/练习安装Mybatis框架/练习安装Mybatis框架.iml" />
+    </modules>
+  </component>
+</project>

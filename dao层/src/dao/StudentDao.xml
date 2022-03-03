@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.StudentDao">
+
+    <select id="getAll" parameterType="java.lang.String" resultType="Student">
+        select * from t_student
+    </select>
+
+
+    <select id="select" parameterType="java.lang.String" resultType="doMain.Student">
+        select * from t_student where id = #{id};
+    </select>
+
+    <insert id="add" >
+        insert into t_student() values (#{id},#{name},#{age})
+    </insert>
+
+    <select id="getMap" resultType="doMain.Student">
+        select * from t_student where id = #{id} and name =#{name}
+    </select>
+
+    <select id="selectLike" resultType="doMain.Student">
+        select * from t_student where name like '%' #{name} '%'
+    </select>
+
+    <select id="selectList_map" resultType="map">
+        select * from t_student
+    </select>
+
+    <select id="getZhang" resultType="map">
+        select name,count(*) from t_student where name like '%' #{name} '%'
+    </select>
+
+    <!--当数据表与类文件属性名不一致时的配置文件-->
+    <resultMap id="mymap" type="Student">
+        <id property="id" column="id"></id>
+        <result property="name" column="myname"></result>
+    </resultMap>
+
+    <select id="getLess" resultType="doMain.Student">
+        select * from t_student
+
+        <where>
+            <if test="name != null and name != ''">
+                name like '%' #{name} '%'
+            </if>
+            <if test="age != null and age != ''">
+                and age like '%' #{age} '%'
+            </if>
+        </where>
+
+        <foreach collection="" item="" open="" close="" separator="">
+            /*collection传入的类型
+            item表示解析之后的字段
+            open开始的字符
+            close结束的字符
+            separator表示元素之间的间隔符*/
+        </foreach>
+
+    </select>
+
+
+
+    <!--多表联查-->
+    <select id="selectmap" resultType="map">
+        select
+            s.name,c.Class_name
+        from t_student s
+        join t_class c
+        on s.classid = c.Class_id
+    </select>
+
+
+
+</mapper>
